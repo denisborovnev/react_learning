@@ -1,0 +1,6 @@
+app1
+
+- app1 - initial
+  problems:
+    - render all items on new item adding (but ok if add new item as last one)
+    - too slow typing in input for new item adding
