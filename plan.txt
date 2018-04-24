@@ -10,3 +10,6 @@ app1
 
 - app1 - reconciliation: inline if vs if - else
 	why commented variant render everything
+
+- app1 - fix typing problem
+   moved list to separate component that recieves items and make it pure (shallow comparision props)

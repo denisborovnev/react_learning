@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from "lodash";
+import {TodoList} from "./TodoList";
 
 export class TodoContainer extends Component {
     constructor(props){
@@ -36,9 +37,7 @@ export class TodoContainer extends Component {
                 {this.state.newTodoWasAdded && <div>Item was added</div>}
                 <input type={"text"} value={this.state.text} onChange={this.onTextChange} />
                 <button type={"button"} onClick={this.addTodo}>Add</button>
-                <div>
-                    {this.state.items.map((item, index) => <div key={item.id}>{item.name}</div>)}
-                </div>
+                <TodoList items={this.state.items} />
             </div>
         )
     }
