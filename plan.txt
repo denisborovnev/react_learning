@@ -7,3 +7,6 @@ app1
 
 - app1 - just add new todo to dom 
      now only new item is added to dom after pressing add button
+
+- app1 - reconciliation: inline if vs if - else
+	why commented variant render everything
