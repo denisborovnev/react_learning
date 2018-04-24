@@ -13,3 +13,6 @@ app1
 
 - app1 - fix typing problem
    moved list to separate component that recieves items and make it pure (shallow comparision props)
+
+- app1 - HoC sample
+   reuse/simpler testing

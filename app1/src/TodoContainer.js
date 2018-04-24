@@ -6,7 +6,7 @@ export class TodoContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            items: _.map(_.range(1, 10000), x => ({ id: x, name: `todo - ${x}`})),
+            items: _.map(_.range(1, 10), x => ({ id: x, name: `todo - ${x}`})),
             text: "",
             newTodoWasAdded: false
         };

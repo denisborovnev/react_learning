@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {TodoContainer} from "./TodoContainer";
+import {FullWindowLine} from "./HoCSample";
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <FullWindowLine color={"red"} />
         <TodoContainer />
       </div>
     );
