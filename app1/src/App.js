@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {TodoContainer} from "./TodoContainer";
-import {FullWindowLine} from "./HoCSample";
+import {FullWindowLine, HalfWindowLine} from "./HoCSample";
 
 class App extends Component {
   render() {
@@ -13,6 +13,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <FullWindowLine color={"red"} />
+        <HalfWindowLine color={"green"} />
         <TodoContainer />
       </div>
     );
