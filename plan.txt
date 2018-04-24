@@ -16,3 +16,10 @@ app1
 
 - app1 - HoC sample
    reuse/simpler testing
+
+- app1 - wrapped as function
+   no predefined props names, but should pass outer props all the time...
+
+- app1 - children as func   
+	see https://reactjs.org/docs/render-props.html
+	be careful with PureComponents

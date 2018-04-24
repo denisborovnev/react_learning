@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-const withWindowWidth = (wrapFunction) => {
-    return class extends Component {
+export class WindowWidth extends Component {
         constructor(props) {
             super(props);
             this.state = {
@@ -23,10 +22,9 @@ const withWindowWidth = (wrapFunction) => {
         }
         
         render() {
-            return this.state.width && wrapFunction(this.props, this.state.width)
+            return this.state.width && this.props.children(this.state.width)
         }
     }
-};
 
 
 class Line extends Component {
@@ -36,5 +34,13 @@ class Line extends Component {
 }
 
 
-export const FullWindowLine = withWindowWidth((props, windowWidth) => <Line {...props} width={windowWidth} />);
-export const HalfWindowLine = withWindowWidth((props, windowWidth) => <Line {...props} width={windowWidth / 2} />);
+export const FullWindowLine = (props) => (
+    <WindowWidth>
+        {(width) => <Line {...props} width={width} />}
+    </WindowWidth>
+);
+export const HalfWindowLine = (props) => (
+    <WindowWidth>
+        {(width) => <Line {...props} width={width / 2} />}
+    </WindowWidth>
+);
