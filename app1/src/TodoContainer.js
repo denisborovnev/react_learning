@@ -30,28 +30,6 @@ export class TodoContainer extends Component {
     };
     
     render() {
-        // if(this.state.newTodoWasAdded) {
-        //     return (
-        //         <div>
-        //             <div>Item was added</div>
-        //             <input type={"text"} value={this.state.text} onChange={this.onTextChange}/>
-        //             <button type={"button"} onClick={this.addTodo}>Add</button>
-        //             <div>
-        //                 {this.state.items.map((item, index) => <div key={item.id}>{item.name}</div>)}
-        //             </div>
-        //         </div>
-        //     )
-        // } else{
-        //     return (
-        //         <div>
-        //             <input type={"text"} value={this.state.text} onChange={this.onTextChange}/>
-        //             <button type={"button"} onClick={this.addTodo}>Add</button>
-        //             <div>
-        //                 {this.state.items.map((item, index) => <div key={item.id}>{item.name}</div>)}
-        //             </div>
-        //         </div>
-        //     )
-        // }
         
         return (
             <div>
