@@ -4,3 +4,6 @@ app1
   problems:
     - render all items on new item adding (but ok if add new item as last one)
     - too slow typing in input for new item adding
+
+- app1 - just add new todo to dom 
+     now only new item is added to dom after pressing add button
