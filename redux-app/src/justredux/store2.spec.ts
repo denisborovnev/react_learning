@@ -51,7 +51,7 @@ describe("thunkMiddleware", () => {
         });
     });
 
-    test("simple objects ignored by middleware and fallbacks to default", () => {
+    test("function should be handled by middleware", () => {
         let store = createStore2(thunkMiddleware);
         let action: ThunkAction = (dispatch, getState) => {
             if(getState().age === 10) {
@@ -63,6 +63,26 @@ describe("thunkMiddleware", () => {
         store.dispatch(<any>action);
         store.dispatch(<any>action);
         store.dispatch(<any>action);
+
+        expect(store.getState()).toMatchObject(<State2> {
+            age: 11
+        });
+    });
+
+    test("function that dispatches one more function", () => {
+        let store = createStore2(thunkMiddleware);
+        let action: ThunkAction = (dispatch, getState) => {
+            if(getState().age === 10) {
+                dispatch(createSetAgeAction(getState().age + 1));
+            }
+        };
+
+        let outerAction: ThunkAction = (dispatch, getState) => {
+            //if it works then dispatch here is the same as store.dispatch...
+            dispatch(<any>action);
+        };
+
+        store.dispatch(<any>outerAction);
 
         expect(store.getState()).toMatchObject(<State2> {
             age: 11
